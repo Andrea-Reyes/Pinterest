@@ -60,6 +60,9 @@
   transform: translateX(-50%) translateY(-10px);
 }
 
+.icon[routerLinkActive="active"] {
+  background-color: #e0e0e0;
+}
 
 .contenido {
   flex: 1;

@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { PostService } from '../../services/post-service';
 import { Posts } from '../../interfaces/posts';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home implements OnInit {
+export class HomeComponent implements OnInit {
   posts: Posts[] = [];
 
   constructor(private postService: PostService) {}

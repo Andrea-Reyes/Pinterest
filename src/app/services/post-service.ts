@@ -18,7 +18,7 @@ export class PostService {
     const res = await firstValueFrom(this.http.get<{ [key: string]: Posts }>(this.urlAPI));
     return Object.keys(res || {}).map(key => ({
       ...res[key],
-      id: key
+      id: key,
     }));
   }
 
