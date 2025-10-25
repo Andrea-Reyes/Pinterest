@@ -2,7 +2,7 @@
 
 .contenedor {
   display: flex;
-  height: 95vh;
+  height: 95vh; 
   font-family: Poppins;
 }
 
@@ -107,12 +107,14 @@
 
 .publicaciones {
   padding: 10px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
-  width: 100%;
-  overflow-y: auto;
-  box-sizing: border-box;
 }
 
 .card {

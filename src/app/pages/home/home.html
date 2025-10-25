@@ -1,6 +1,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+<div class="contenedor-general">
+
+</div>
+
 <div class="contenedor">
     <div class="iconos">
        <div class="icon" title="Inicio"> <i class="fab fa-pinterest"></i></div>
@@ -20,13 +24,15 @@
     </div>
 
     <div class="publicaciones">
-        @for (post of posts; track post.id) {
+        <div class="cards">
+            @for (post of posts; track post.id) {
             <div class="card">
                 <img [src]="post.imagenUrl" alt="{{ post.titulo }}" />
                 <h3>{{ post.titulo }}</h3>
                 <p>{{ post.descripcion }}</p>
             </div>
         }
+        </div>
     </div>
   </div>
 </div>
