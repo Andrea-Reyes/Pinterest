@@ -1,11 +1,14 @@
-<h3>Agregar publicacionnnnnnnnn</h3>
-<label>Nombre del publicacion</label>
-<input type="text" [(ngModel)]="titulo" [ngModelOptions]="{standalone:true}">
-<br>
-<label>Nombre del publicacion</label>
-<input type="text" [(ngModel)]="descripcion" [ngModelOptions]="{standalone:true}">
-<br>
-<label>Nombre del publicacion</label>
-<input type="text" [(ngModel)]="imagenUrl" [ngModelOptions]="{standalone:true}">
-<br>
-<button (click)="agregar()">Agregar</button>
+<div class="publicaciones">
+  <h3>Agregar publicación</h3>
+
+  <label for="titulo">Título</label>
+  <input id="titulo" type="text" [(ngModel)]="titulo" [ngModelOptions]="{ standalone: true }" />
+
+  <label for="descripcion">Descripción</label>
+  <input id="descripcion" type="text" [(ngModel)]="descripcion" [ngModelOptions]="{ standalone: true }" />
+
+  <label for="imagenUrl">URL de la imagen</label>
+  <input id="imagenUrl" type="text" [(ngModel)]="imagenUrl" [ngModelOptions]="{ standalone: true }" />
+
+  <button (click)="agregar()">Agregar publicación</button>
+</div>
