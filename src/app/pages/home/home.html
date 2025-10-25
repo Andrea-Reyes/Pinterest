@@ -1,7 +1,32 @@
-@for (post of posts; track post.id) {
-  <div class="card">
-    <img [src]="post.imagenUrl" alt="{{ post.titulo }}" />
-    <h3>{{ post.titulo }}</h3>
-    <p>{{ post.descripcion }}</p>
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="contenedor">
+    <div class="iconos">
+       <div class="icon" title="Inicio"> <i class="fab fa-pinterest"></i></div>
+       <div class="icon" title="Inicio"> <span class="material-icons-outlined">home</span></div>
+       <div class="icon" title="Explorar"> <span class="material-icons-outlined">explore</span></div>
+       <div class="icon" title="Crear"> <span class="material-icons-outlined">add_box</span></div>
+       <div class="icon" title="Actualizaciones"> <span class="material-icons-outlined">notifications</span></div>
+       <div class="icon" title="Mensajes"> <span class="material-icons-outlined">chat</span></div>
   </div>
-}
+
+  <div class="contenido">
+    <div class="buscador">
+        <div class="buscador-icono">
+            <span class="material-icons-outlined">search</span>
+            <input type="text" placeholder="Buscar..." />
+        </div>
+    </div>
+
+    <div class="publicaciones">
+        @for (post of posts; track post.id) {
+            <div class="card">
+                <img [src]="post.imagenUrl" alt="{{ post.titulo }}" />
+                <h3>{{ post.titulo }}</h3>
+                <p>{{ post.descripcion }}</p>
+            </div>
+        }
+    </div>
+  </div>
+</div>
